@@ -16,18 +16,17 @@ class Taxi extends Model
 
     protected $keyType = 'uuid';
 
-    protected $table = 'taxi';
+    protected $table = 'taxis';
 
-    //protected $fillable = [];
-
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'cpf', 'date_of_birth', 'gender', 'password',
-        'image', 'hash', 'qr_code'
+        'name', 'email', 'cpf', 'phone', 'date_birth', 'gender', 'password',
+        'image', 'hash', 'qr_code', 'status', 'accept_lgpd'
     ];
 
     /**
@@ -39,18 +38,11 @@ class Taxi extends Model
         'password'
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 
     public $genderOptions = [
         'mas' => 'Masculino',
-        'fem' => 'Feminino'
+        'fem' => 'Feminino',
+        'out' => 'Outros'
     ];
 
     public $statusOptions = [

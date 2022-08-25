@@ -21,8 +21,20 @@ class TaxiController extends Controller
 
 
     public function store (TaxiRequest $request) {
-        $courses = $this->repository->setCreateTaxi($request->validated());
-        return new TaxiResource($courses);
+        
+        $taxi = $this->repository_taxi->setCreateTaxi($request->validated());
+
+       return response()->json($taxi);
+
+        /*
+
+        if(!gettype($taxi) == boolean) {
+            dd("FOOOOI");
+            return new TaxiResource($taxi);
+        }
+
+        return response()->json(['error' => [config('messages.taxi_not_created')]]);
+        */
     }
 
 

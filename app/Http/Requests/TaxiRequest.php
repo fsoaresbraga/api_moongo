@@ -39,6 +39,13 @@ class TaxiRequest extends FormRequest
                 'email',
                 Rule::unique('taxis')->ignore($uuid)
             ],
+
+            'phone' => [
+                'required',
+                'string',
+                'min:11',
+                'max:12'
+            ],
             'cpf' => [
                 'required',
                 'string',
@@ -46,7 +53,7 @@ class TaxiRequest extends FormRequest
                 'max:11',
                 Rule::unique('taxis')->ignore($uuid)
             ],
-            'birth_date' => [
+            'date_birth' => [
                 'required',
                 'date_format:d/m/Y'
             ],
@@ -58,15 +65,10 @@ class TaxiRequest extends FormRequest
                 'required',
                 'min:4',
                 'max:4',
-                'integer',
+                'string',
                 'regex:/[0-9]/',
             ],
-            'image' => [
-                'required',
-                'image',
-                'max:1024',
-                'dimensions:min_width=100,min_height=100,max_width=300,max_height=300',
-                'mimes:jpg,jpeg,png,svg'
+            'image' => [    
             ],
 
             //feature taxi
@@ -74,7 +76,7 @@ class TaxiRequest extends FormRequest
                 'required',
                 'min:8',
                 'max:8',
-                'integer'
+                'string'
             ],
             'street' => [
                 'required',
@@ -91,6 +93,12 @@ class TaxiRequest extends FormRequest
                 'string'
             ],
             'complement' => [
+            ],
+            'state' => [
+                'required',
+                'min:2',
+                'max:2',
+                'string'
             ],
             'city' => [
                 'required',
@@ -110,7 +118,7 @@ class TaxiRequest extends FormRequest
                 'required',
                 'min:11',
                 'max:11',
-                'integer'
+                'string'
             ],
             'model' => [
                 'required',
@@ -123,11 +131,11 @@ class TaxiRequest extends FormRequest
                 'required',
             ]
 
-
         ];
 
         if($this->method() == 'PUT') {
             $rules['password'] = ['min:4','max:4','integer','regex:/[0-9]/'];
+            $rules['image'] = ['image','max:1024','dimensions:min_width=100,min_height=100,max_width=300,max_height=300','mimes:jpg,jpeg,png,svg'];
         }
 
         return $rules;

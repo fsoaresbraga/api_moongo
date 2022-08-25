@@ -17,14 +17,16 @@ class CreateTaxisTable extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('cpf');
-            $table->date('date_of_birth');
-            $table->unum('gender', ['mas', 'fem']);
+            $table->string('cpf');
+            $table->string('phone');
+            $table->date('date_birth');
+            $table->enum('gender', ['mas', 'fem', 'out']);
             $table->string('password');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->integer('hash');
             $table->string('qr_code');
             $table->boolean('status');
+            $table->boolean('accept_lgpd');
             $table->timestamps();
         });
     }

@@ -21,6 +21,7 @@ class CreateTaxiPlacesTable extends Migration
             $table->string('number')->nullable();
             $table->string('district');
             $table->string('complement')->nullable();
+            $table->string('state');
             $table->string('city');
             $table->timestamps();
         });

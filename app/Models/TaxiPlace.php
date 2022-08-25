@@ -19,7 +19,7 @@ class TaxiPlace extends Model
     protected $table = 'taxi_places';
 
     protected $fillable = [
-        'id_taxi', 'cep', 'street', 'number', 'district', 'complement', 'city'
+        'id_taxi', 'cep', 'street', 'number', 'district', 'complement', 'state', 'city'
     ];
 
     public function taxi(){

@@ -18,8 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->integer('cpf');
-            $table->date('date_of_birth');
-            $table->unum('gender', ['M', 'F']);
+            $table->date('birth_date');
+            $table->enum('gender', ['M', 'F']);
             $table->string('password');
             $table->string('image');
             $table->integer('hash');
