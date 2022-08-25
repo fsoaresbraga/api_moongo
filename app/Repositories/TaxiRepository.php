@@ -42,8 +42,6 @@ class TaxiRepository {
             'accept_lgpd' => 1
         ]);
 
-
-
        $car = $taxi->car()->create([
             'car_plate' => $date['car_plate'],
             'car_renamed' => $date['car_renamed'],
@@ -65,13 +63,11 @@ class TaxiRepository {
 
         if($taxi && $car && $place) {
 
-            //Mail::to($taxi->email)->send(new SendMailWelcome($taxi));
-            //JobSendMailWelcome::dispatch($taxi)->delay(now()->addSeconds('30'));
-
+            JobSendMailWelcome::dispatch($taxi)->delay(now()->addSeconds('30'));
             return $taxi;
         }
 
-       return false;
+        return false;
     }
 
     private function generateHash() {

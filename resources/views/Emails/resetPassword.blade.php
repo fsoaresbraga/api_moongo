@@ -6,18 +6,7 @@
   <meta name="x-apple-disable-message-reformatting">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="telephone=no" name="format-detection">
-  <title>New Email</title><!--[if (mso 16)]>
-    <style type="text/css">
-    a {text-decoration: none;}
-    </style>
-    <![endif]--><!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]--><!--[if gte mso 9]>
-<xml>
-    <o:OfficeDocumentSettings>
-    <o:AllowPNG></o:AllowPNG>
-    <o:PixelsPerInch>96</o:PixelsPerInch>
-    </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
+  <title>Redefinir senha moongo</title>
   <style type="text/css">
 #outlook a {
 	padding:0;
@@ -70,7 +59,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr>
-                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://wapjeo.stripocdn.email/content/guids/CABINET_c0630b16de7a524cd025572ac87953c1/images/5462242_1.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="600"></td>
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://wapjeo.stripocdn.email/content/guids/CABINET_c0630b16de7a524cd025572ac87953c1/images/o_que_e_marketing_de_conteudo_inbound_marketing.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="600"></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -90,17 +79,16 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:560px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr>
-                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;line-height:30px;mso-line-height-rule:exactly;font-family:georgia, times, 'times new roman', serif;font-size:20px;font-style:normal;font-weight:normal;color:#333333">Resetar Senha</h3><h2 style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:georgia, times, 'times new roman', serif;font-size:24px;font-style:normal;font-weight:normal;color:#333333;display:none"><br></h2></td>
+                      <td align="left" style="padding:0;Margin:0;padding-top:15px;padding-bottom:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#777777;font-size:14px">Olá, {{$taxi->name}}! Você solicitou um código de verificação para&nbsp;moongo.com.br. Para concluir sua redefinição de senha, digite o seguinte código.<br><br><b>Seu código de verificação é {{$password->token}}</b></p></td>
                      </tr>
                      <tr>
-                      <td align="left" style="padding:0;Margin:0;padding-top:15px;padding-bottom:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#777777;font-size:14px">Olá, {{$taxi->name}} <br><br>  <b>{{$password->token}}</b></p></td>
+                      <td align="left" style="padding:0;Margin:0;padding-top:15px;padding-bottom:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#7c7c7a;font-size:14px"><b>Se você não solicitou a redefinição da sua senha, </b>&nbsp; desconsidere este e-mail.<br><br><br>Atenciosamente, Moongo.</p></td>
                      </tr>
                    </table></td>
                  </tr>
                </table></td>
-               </table></td>
              </tr>
-            <tr>
+             <tr>
               <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
                <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                  <tr>

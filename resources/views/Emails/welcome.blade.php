@@ -70,7 +70,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr>
-                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://wapjeo.stripocdn.email/content/guids/CABINET_c0630b16de7a524cd025572ac87953c1/images/5462242_1.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="600"></td>
+                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://wapjeo.stripocdn.email/content/guids/CABINET_c0630b16de7a524cd025572ac87953c1/images/post_de_instagram_marketing_digital_engajamento_azul_jNK.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="600"></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -90,30 +90,7 @@ a[x-apple-data-detectors] {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:560px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr>
-                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;line-height:30px;mso-line-height-rule:exactly;font-family:georgia, times, 'times new roman', serif;font-size:20px;font-style:normal;font-weight:normal;color:#333333">Seja Bem-Vindo à MOONGO</h3><h2 style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:georgia, times, 'times new roman', serif;font-size:24px;font-style:normal;font-weight:normal;color:#333333;display:none"><br></h2></td>
-                     </tr>
-                     <tr>
-                      <td align="left" style="padding:0;Margin:0;padding-top:15px;padding-bottom:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#777777;font-size:14px">Olá, {{$taxi->name}} <br><br>  UM TEXTO PARA SER COLOCADO AQUI</p></td>
-                     </tr>
-                   </table></td>
-                 </tr>
-               </table></td>
-               </table></td>
-             </tr>
-             <tr>
-              <td align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px">
-               <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                 <tr>
-                  <td valign="top" align="center" style="padding:0;Margin:0;width:560px">
-                   <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                     <tr>
-                      <td align="center" style="padding:0;Margin:0;font-size:0px"><img class="adapt-img" src="https://wapjeo.stripocdn.email/content/guids/CABINET_c0630b16de7a524cd025572ac87953c1/images/about.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560"></td>
-                     </tr>
-                     <tr>
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><h3 style="Margin:0;line-height:30px;mso-line-height-rule:exactly;font-family:georgia, times, 'times new roman', serif;font-size:20px;font-style:normal;font-weight:normal;color:#333333">Somos a extensão que faltava para revolucionar o varejo</h3><h2 style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:georgia, times, 'times new roman', serif;font-size:24px;font-style:normal;font-weight:normal;color:#333333;display:none"><br></h2></td>
-                     </tr>
-                     <tr>
-                      <td align="left" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#777777;font-size:14px">MOONGO, serviço de bordo que possibilita a praticidade e integridade em outro nível, ultrapassando o ambientes das lojas físicas. Essa solução reforça a missão de entregar mais conveniência e comodidade para o cliente/passageiro de forma rápida, simples e intuitiva.</p></td>
+                      <td align="left" style="padding:0;Margin:0;padding-top:15px;padding-bottom:30px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px">Olá, {{$taxi->name}}.<br><br>Seu cadastro na Moongo foi realizado com sucesso. A partir de agora, você pode realizar vendas de snacks dentro do seu carro.<br><br>&nbsp;MOONGO, serviço de bordo que possibilita a praticidade e integridade em outro nível, ultrapassando o ambientes das lojas físicas. Essa solução reforça a missão de entregar mais conveniência e comodidade para o cliente/passageiro de forma rápida, simples e intuitiva. <br><br>Bons negócios!<br>Equipe Moongo.</p></td>
                      </tr>
                    </table></td>
                  </tr>
