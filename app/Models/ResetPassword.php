@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class TaxiPlace extends Model
+class ResetPassword extends Model
 {
     use HasFactory, Notifiable, UuidTrait;
 
@@ -16,13 +16,9 @@ class TaxiPlace extends Model
 
     protected $keyType = 'uuid';
 
-    protected $table = 'taxi_places';
+    protected $table = 'password_resets';
 
-    protected $fillable = [
-        'id_taxi', 'zipcode', 'address', 'address_number', 'neighborhood', 'complement', 'state', 'city'
-    ];
+    protected $fillable = ['cpf', 'token'];
 
-    public function taxi(){
-        return $this->belongsTo(Taxi::class);
-    }
+
 }

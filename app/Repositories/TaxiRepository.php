@@ -5,8 +5,11 @@ namespace App\Repositories;
 use Carbon\Carbon;
 use App\Models\Taxi;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Hash;
+use App\Mail\SendMailWelcome;
 
+use App\Jobs\JobSendMailWelcome;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Cache;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
@@ -20,36 +23,27 @@ class TaxiRepository {
 
 
     public function setCreateTaxi(array $date): Taxi {
-        //dd(($date));
-        /*
-        $count_taxi = $this->repo_taxi::count();
-        $date = Carbon::now()->format('d'). $count_taxi + 1;
-        $hash = str_pad($date, 6, '0', STR_PAD_RIGHT);
 
-        $url_qr_code = config('app.url').'/'.$hash;
-        $name_qr_code = $hash.'qrcode.svg';
-        $path_qr_code = public_path('uploads/qrcodes/taxis/').$name_qr_code;
+        $hash = $this->generateHash();
+        $qr_code = $this->generateQrCode($hash);
 
-        QrCode::generate($url_qr_code, $path_qr_code);
-        */
+        $taxi = $this->repo_taxi::create([
+            'name' => $date['name'],
+            'email' => $date['email'],
+            'phone' => $date['phone'],
+            'cpf' => $date['cpf'],
+            'date_birth' => Carbon::parse($date['date_birth'])->format("Y-m-d"),
+            'gender' => $date['gender'],
+            'password' => Hash::make($date['password']),
+            'image' => null,
+            'hash' => $hash,
+            'qr_code' => $qr_code,
+            'status' => 1,
+            'accept_lgpd' => 1
+        ]);
 
-        $taxi = $this->repo_taxi::insert([
-                    'name' => $date['name'],
-                    'email' => $date['email'],
-                    'phone' => $date['phone'],
-                    'cpf' => $date['cpf'],
-                    'date_birth' => Carbon::parse($date['date_birth'])->format("Y-m-d"),
-                    'gender' => $date['gender'],
-                    'password' => Hash::make($date['password']),
-                    'image' => null,
-                    'hash' => (int) "123",
-                    'qr_code' => "TESTE",
-                    'status' => 1,
-                    'accept_lgpd' => 1
-                ]); 
-               
-        return $taxi;           
-    /*
+
+
        $car = $taxi->car()->create([
             'car_plate' => $date['car_plate'],
             'car_renamed' => $date['car_renamed'],
@@ -59,20 +53,46 @@ class TaxiRepository {
        ]);
 
        $place = $taxi->place()->create([
-            'cep' => $date['cep'],
-            'street' => $date['street'],
-            'number' => isset($date['number']) ? $date['number'] : null,
-            'district' => $date['district'],
+            'zipcode' => $date['zipcode'],
+            'address' => $date['address'],
+            'address_number' => isset($date['address_number']) ? $date['address_number'] : null,
+            'neighborhood' => $date['neighborhood'],
             'complement' => isset($date['complement']) ? $date['complement'] : null,
+            'state' => $date['state'],
             'city' => $date['city'],
        ]);
 
-*/
-       if($taxi) {
+
+        if($taxi && $car && $place) {
+
+            //Mail::to($taxi->email)->send(new SendMailWelcome($taxi));
+            //JobSendMailWelcome::dispatch($taxi)->delay(now()->addSeconds('30'));
+
             return $taxi;
-       }
+        }
 
        return false;
+    }
+
+    private function generateHash() {
+
+        $count_taxi = $this->repo_taxi::whereDate('created_at', Carbon::now()->format('Y-m-d'))->count();
+        $date = Carbon::now()->format('d');
+        $number_hash =  str_pad(($count_taxi + 1) , 4 , '0' , STR_PAD_LEFT);
+        return $date.$number_hash;
+
+    }
+
+    private function generateQrCode ($hash) {
+
+        $url_qr_code = config('app.url').'/'.$hash;
+        $name_qr_code = uniqid().'.svg';
+        $path_qr_code = public_path('/uploads/qrcodes/taxis/'.$name_qr_code);
+        $local_qr_code = '/uploads/qrcodes/taxis/'.$name_qr_code;
+
+        QrCode::generate($url_qr_code, $path_qr_code);
+
+        return $local_qr_code;
     }
 
 

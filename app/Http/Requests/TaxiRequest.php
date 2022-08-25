@@ -68,25 +68,25 @@ class TaxiRequest extends FormRequest
                 'string',
                 'regex:/[0-9]/',
             ],
-            'image' => [    
+            'image' => [
             ],
 
             //feature taxi
-            'cep' => [
+            'zipcode' => [
                 'required',
                 'min:8',
                 'max:8',
                 'string'
             ],
-            'street' => [
+            'address' => [
                 'required',
                 'min:3',
                 'max:200',
                 'string'
             ],
-            'number' => [
+            'address_number' => [
             ],
-            'district' => [
+            'neighborhood' => [
                 'required',
                 'min:3',
                 'max:200',

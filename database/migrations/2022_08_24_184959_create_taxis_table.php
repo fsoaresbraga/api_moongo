@@ -23,7 +23,7 @@ class CreateTaxisTable extends Migration
             $table->enum('gender', ['mas', 'fem', 'out']);
             $table->string('password');
             $table->string('image')->nullable();
-            $table->integer('hash');
+            $table->string('hash');
             $table->string('qr_code');
             $table->boolean('status');
             $table->boolean('accept_lgpd');

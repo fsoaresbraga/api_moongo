@@ -6,10 +6,12 @@ use App\Models\Traits\UuidTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Taxi extends Model
+class Taxi extends Authenticatable
 {
-    use HasFactory, Notifiable, UuidTrait;
+    use HasFactory, Notifiable, UuidTrait, HasApiTokens;
 
 
     public $incrementing = false;
@@ -18,7 +20,7 @@ class Taxi extends Model
 
     protected $table = 'taxis';
 
-    
+
     /**
      * The attributes that are mass assignable.
      *

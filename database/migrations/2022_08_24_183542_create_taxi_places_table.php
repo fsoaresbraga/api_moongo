@@ -16,10 +16,10 @@ class CreateTaxiPlacesTable extends Migration
         Schema::create('taxi_places', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('taxi_id')->nullable(false);
-            $table->integer('cep');
-            $table->string('street');
-            $table->string('number')->nullable();
-            $table->string('district');
+            $table->integer('zipcode');
+            $table->string('address');
+            $table->string('address_number')->nullable();
+            $table->string('neighborhood');
             $table->string('complement')->nullable();
             $table->string('state');
             $table->string('city');
